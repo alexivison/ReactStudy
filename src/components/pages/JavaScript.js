@@ -30,28 +30,10 @@ const JavaScript = () => (
                 `}
             </TextBlock>
             <CodeBlock>
-            {`
-<>
-    <SectionHeader text="JavaScriptの基本" />
-    <Section>
-        <TextBlock>
-            <Header.H2>Destructuring</Header.H2>
-            <Text>
-
-            </Text>
-        </TextBlock>
-    </Section>
-
-    <Section>
-        <TextBlock>
-            <Header.H2>Hage</Header.H2>
-            <Text>
-
-            </Text>
-        </TextBlock>
-        <CodeBlock />
-    </Section>
-</>
+                {`
+const hoge = () => {
+    hoge
+}
                 `}
             </CodeBlock>
         </Section>

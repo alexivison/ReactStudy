@@ -22,6 +22,31 @@ const ReactPage = () => (
                     こんなもん
                 `}
             </TextBlock>
+            <CodeBlock>
+                {`
+const Hoge = ({ children, ...props }) => (
+    <div>
+        {children}
+    </div>
+)
+                `}
+            </CodeBlock>
+        </Section>
+
+        <Section>
+            <TextBlock header="イェええー">
+                {`
+                    あsdはsdはkshdかhksでゃsd
+
+                    あsdlじゃsjdぁjsdlじゃsdあljsdぁjsだsd
+                    あklsdlかsldかsd
+
+                    あsdkぁskdぁks；d化s；ldk；ぁskd；ぁks；ldか；skd；亜skd；亜ksd
+                    亜ldsぁ；sdl；亜sld；亜lsdぁ；sdl亜；sdlあsd
+
+                    亜ldぁ；slだsd
+                `}
+            </TextBlock>
         </Section>
     </>
 )
