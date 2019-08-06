@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SectionInfo = ({ children }) => {
+import Text from '../atoms/Text'
+import Header from '../atoms/Header'
+
+const SectionInfo = ({ header, children }) => {
     return (
         <Container>
-            {children}
+            {header && <Header.H2>{header}</Header.H2>}
+            <Text>{children}</Text>
         </Container>
     )
 }

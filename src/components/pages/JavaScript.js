@@ -2,43 +2,60 @@ import React from 'react'
 
 import Section from '../organisms/Section'
 
-import SectionInfo from '../molecules/SectionInfo'
-import SectionContent from '../molecules/SectionContent'
+import TextBlock from '../molecules/TextBlock'
+import CodeBlock from '../molecules/CodeBlock'
 import SectionHeader from '../molecules/SectionHeader'
 
-import Text from '../atoms/Text'
-import Header from '../atoms/Header'
+const JavaScript = () => (
+    <>
+        <SectionHeader text="JavaScriptの基本" />
+        {/* Destructuring */}
+        <Section>
+            <TextBlock header="Destructuring">
+                {`
+                「ああー、このObjectってなんでこんなに要らないデータ入ってるんだろうな、、綺麗に描きたいだけ！！」
+                と思ったことあるのでしょうか。
 
-const JavaScript = () => {
-    return (
-        <>
-            <SectionHeader text="JavaScriptの基本" />
-            <Section>
-                <SectionInfo>
-                    <Header.H2>Destructuring</Header.H2>
-                    <Text>
-                        {`
-                        「ああー、このObjectってなんでこんなに要らないデータ入ってるんだろうな、、綺麗に描きたいだけ！！」
-                        と思ったことあるのでしょうか。
+                あってもなくても僕があります！でもその気持ちはある技術でまろやかになりました。やべえええええええええええええええええええええええええええええええええええええええええええ
+                `}
+            </TextBlock>
+        </Section>
+        {/* Code and such */}
+        <Section>
+            <TextBlock>
+                {`
+                まじやべえ
 
-                        あってもなくても僕があります！でもその気持ちはある技術でまろやかになりました。
-                        `}
-                    </Text>
-                </SectionInfo>
-                {/* <SectionContent /> */}
-            </Section>
+                すげーやべえ
+                `}
+            </TextBlock>
+            <CodeBlock>
+            {`
+<>
+    <SectionHeader text="JavaScriptの基本" />
+    <Section>
+        <TextBlock>
+            <Header.H2>Destructuring</Header.H2>
+            <Text>
 
-            <Section>
-                <SectionInfo>
-                    <Header.H2>Hage</Header.H2>
-                    <Text>
-                        Hage hoge hoge hoge
-                    </Text>
-                </SectionInfo>
-                <SectionContent />
-            </Section>
-        </>
-    )
-}
+            </Text>
+        </TextBlock>
+    </Section>
+
+    <Section>
+        <TextBlock>
+            <Header.H2>Hage</Header.H2>
+            <Text>
+
+            </Text>
+        </TextBlock>
+        <CodeBlock />
+    </Section>
+</>
+                `}
+            </CodeBlock>
+        </Section>
+    </>
+)
 
 export default JavaScript

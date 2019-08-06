@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Sidebar from '../organisms/Sidebar'
 
 import JavaScript from './JavaScript'
+import ReactPage from './React'
 
 import { background } from '../styles/colors'
 
@@ -13,6 +14,7 @@ const Main = () => {
             <Sidebar />
             <Contents>
                 <JavaScript />
+                <ReactPage />
             </Contents>
         </Container>
     )

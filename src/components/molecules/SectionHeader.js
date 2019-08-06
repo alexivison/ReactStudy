@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 import Header from '../atoms/Header'
 
-import { header } from '../styles/colors'
-
 const SectionHeader = ({ text }) => {
     return (
         <Container>

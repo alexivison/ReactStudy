@@ -13,7 +13,7 @@ export default Section
 
 const Container = styled.div`
     display: grid;
-    grid-auto-columns: max-content auto auto;
+    grid-auto-columns: auto auto max-content;
     grid-template-areas:
         'header header header'
         'info code code'
