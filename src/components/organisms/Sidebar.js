@@ -10,7 +10,7 @@ import HomeIcon from '../../resources/home-icon.png'
 import MenuIcon from '../../resources/menu-icon.png'
 
 const Sidebar = () => {
-    const inactiveWidth = 16 + 32 + 16
+    const inactiveWidth = 64
     const activeWidth = 200
     const [width, setWidth] = useState(inactiveWidth)
     const isActive = width === activeWidth
@@ -31,11 +31,33 @@ const Sidebar = () => {
                 <Link to="/javascript">
                     <LinkImage src={JSLogo} size={32} />
                 </Link>
+                {isActive &&
+                    <Ul>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                    </Ul>
+                }
             </Item>
             <Item>
                 <Link to="/react">
                     <LinkImage src={ReactLogo} size={32} />
                 </Link>
+                {isActive &&
+                    <Ul>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                        <li>Hoge</li>
+                    </Ul>
+                }
             </Item>
         </Container>
     )
@@ -78,4 +100,12 @@ const Link = styled(RouterLink)`
     &:hover ${LinkImage} {
         background-color: white;
     }
+`
+
+const Ul = styled.ul`
+    margin: 8px 0;
+    list-style-type: decimal;
+    color: white;
+    line-height: 1.5;
+    font-size: 14px;
 `
