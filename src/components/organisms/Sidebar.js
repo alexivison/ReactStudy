@@ -7,6 +7,7 @@ import Image from '../atoms/Image'
 import JSLogo from '../../resources/js-logo.png'
 import ReactLogo from '../../resources/react-logo.png'
 import HomeIcon from '../../resources/home-icon.png'
+import MenuIcon from '../../resources/menu-icon.png'
 
 const Sidebar = () => {
     const inactiveWidth = 16 + 32 + 16
@@ -19,7 +20,7 @@ const Sidebar = () => {
     return (
         <Container width={width}>
             <HomeItem onClick={toggleSidebar}>
-                <Image src={HomeIcon} size={24} />
+                <Image src={MenuIcon} size={32} />
             </HomeItem>
             <Item>
                 <Link to="/">
@@ -31,9 +32,11 @@ const Sidebar = () => {
                     <LinkImage src={JSLogo} size={32} />
                 </Link>
             </Item>
-            <Link to="/react">
-                <LinkImage src={ReactLogo} size={32} />
-            </Link>
+            <Item>
+                <Link to="/react">
+                    <LinkImage src={ReactLogo} size={32} />
+                </Link>
+            </Item>
         </Container>
     )
 }
@@ -51,14 +54,14 @@ const Container = styled.div`
     background-color: #282729;
 `
 
-const HomeItem = styled.div`
-    display: grid;
-    padding: 16px;
-    justify-self: end;
-`
-
 const Item = styled.div`
     display: grid;
+    user-select: none;
+`
+
+const HomeItem = styled(Item)`
+    padding: 16px;
+    justify-self: end;
 `
 
 const LinkImage = styled(Image)``
