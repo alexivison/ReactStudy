@@ -21,16 +21,19 @@ export default Header
 
 const BaseHeader = styled.h1`
     margin: 0;
+    line-height: 1;
     color: white;
 `
 
 const Header1 = styled(BaseHeader)`
-    font-size: 32px;
+    font-size: 24px;
 `
 
 const Header2 = styled(BaseHeader)`
-    margin: 0 0 8px 0;
-    font-size: 24px;
+    display: inline-block;
+    font-size: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #02d0f5;
 `
 
 const Header3 = styled(BaseHeader)`

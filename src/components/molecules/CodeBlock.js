@@ -15,9 +15,8 @@ export default SectionContent
 
 const Container = styled.div`
     grid-area: code;
-    padding: 16px 24px;
+    padding: 8px 24px;
     margin: 0 16px;
     border-radius: 16px;
     background-color: white;
-    // box-shadow: 0px 2px 16px 4px rebeccapurple;
 `

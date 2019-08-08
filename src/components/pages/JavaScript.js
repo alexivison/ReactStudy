@@ -5,13 +5,14 @@ import Section from '../organisms/Section'
 import TextBlock from '../molecules/TextBlock'
 import CodeBlock from '../molecules/CodeBlock'
 import SectionHeader from '../molecules/SectionHeader'
+import Header from '../atoms/Header'
 
 const JavaScript = () => (
     <>
         <SectionHeader text="JavaScriptの基本" />
         {/* Destructuring */}
         <Section>
-            <TextBlock header="Destructuring">
+            <TextBlock header={Header.H2} headerTitle="Destructuring">
                 {`
                 「ああー、このObjectってなんでこんなに要らないデータ入ってるんだろうな、、綺麗に描きたいだけ！！」
                 と思ったことあるのでしょうか。

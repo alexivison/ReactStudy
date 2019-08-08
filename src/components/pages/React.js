@@ -13,7 +13,7 @@ const ReactPage = () => (
     <>
         <SectionHeader text="Reactの基本" />
         <Section>
-            <TextBlock header="Propsなど">
+            <TextBlock header={Header.H2} headerTitle="Propsなど">
                 {`
                     これはですね、React
 
@@ -34,7 +34,7 @@ const Hoge = ({ children, ...props }) => (
         </Section>
 
         <Section>
-            <TextBlock header="イェええー">
+            <TextBlock header={Header.H2} headerTitle="ほげマン">
                 {`
                     あsdはsdはkshdかhksでゃsd
 

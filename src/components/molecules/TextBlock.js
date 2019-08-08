@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Text from '../atoms/Text'
-import Header from '../atoms/Header'
 
-const SectionInfo = ({ header, children }) => {
+const SectionInfo = ({ header: Header, headerTitle, children }) => {
     return (
         <Container>
-            {header && <Header.H2>{header}</Header.H2>}
+            {Header && <Header>{headerTitle}</Header>}
             <Text>{children}</Text>
         </Container>
     )
