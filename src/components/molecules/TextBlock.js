@@ -19,5 +19,4 @@ const Container = styled.div`
     box-sizing: border-box;
     word-break: break-word;
     font-size: 14px;
-    padding: 0px 24px;
 `

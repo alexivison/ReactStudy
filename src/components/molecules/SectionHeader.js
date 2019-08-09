@@ -15,7 +15,6 @@ export default SectionHeader
 
 const Container = styled.div`
     grid-area: header;
-    padding: 16px 0px;
-    margin: 0px 16px;
-    border-bottom: 2px solid #969696;
+    padding: 20px 0px;
+    border-bottom: 1px solid #757575;
 `

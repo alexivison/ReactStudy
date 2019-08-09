@@ -27,16 +27,19 @@ const BaseHeader = styled.h1`
 
 const Header1 = styled(BaseHeader)`
     font-size: 24px;
+    font-weight: 800;
 `
 
 const Header2 = styled(BaseHeader)`
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
     padding-bottom: 8px;
     border-bottom: 1px solid #02d0f5;
 `
 
 const Header3 = styled(BaseHeader)`
     margin: 0 0 8px 0;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 300;
 `

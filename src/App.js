@@ -23,5 +23,4 @@ const Container = styled.div`
     grid-template-areas:
         'sidebar contents contents'
         'sidebar contents contents';
-    min-height: 100vh;
 `

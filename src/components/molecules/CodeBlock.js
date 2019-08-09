@@ -15,8 +15,7 @@ export default SectionContent
 
 const Container = styled.div`
     grid-area: code;
-    padding: 8px 24px;
-    margin: 0 16px;
+    padding: 0px 16px;
     border-radius: 16px;
     background-color: white;
 `

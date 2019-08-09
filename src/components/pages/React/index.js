@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Section from '../organisms/Section'
+import Section from '../../organisms/Section'
 
-import TextBlock from '../molecules/TextBlock'
-import CodeBlock from '../molecules/CodeBlock'
-import SectionHeader from '../molecules/SectionHeader'
+import TextBlock from '../../molecules/TextBlock'
+import CodeBlock from '../../molecules/CodeBlock'
+import SectionHeader from '../../molecules/SectionHeader'
 
-import Text from '../atoms/Text'
-import Header from '../atoms/Header'
+import Text from '../../atoms/Text'
+import Header from '../../atoms/Header'
 
 const ReactPage = () => (
     <>
