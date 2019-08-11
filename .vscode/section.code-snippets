@@ -1,0 +1,59 @@
+{
+	// Place your react-study workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+
+	"Section Imports": {
+		"prefix": "import section blocks",
+		"body": [
+			"import Section from '../../organisms/Section'",
+			"import TextBlock from '../../molecules/TextBlock'",
+			"import CodeBlock from '../../molecules/CodeBlock'",
+			"import DemoBlock from '../../molecules/DemoBlock'"
+		],
+		"description": ""
+	},
+
+	"Section Default": {
+		"prefix": "section",
+		"body": [
+			"<Section>",
+			"    <TextBlock>",
+			"        {``}",
+			"    </TextBlock>",
+			"    <CodeBlock></CodeBlock>",
+			"</Section>"
+		],
+		"description": "Create a new section with a Text -and CodeBlock"
+	},
+
+	"Text Section": {
+		"prefix": "text section",
+		"body": [
+			"<Section>",
+			"    <TextBlock>",
+			"        {``}",
+			"    </TextBlock>",
+			"</Section>"
+		],
+		"description": "Create a new section with a Text -and CodeBlock"
+	},
+
+	"Demo Default": {
+		"prefix": "code section",
+		"body": [
+			"<Section>",
+			"    <TextBlock>",
+			"        {``}",
+			"    </TextBlock>",
+			"    <DemoBlock>",
+			"        {/* Add your demo components here. They will be rendered normally */}",
+			"    </DemoBlock>",
+			"</Section>"
+		],
+		"description": "Create a new section with a Text -and CodeBlock"
+	},
+}
