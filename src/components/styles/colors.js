@@ -1,2 +1,2 @@
-export const background = "#1b1b1b"
-export const header = "#2f2f2f"
+export const White = "#efefef"
+export const Black = "#1b1b1b"
