@@ -1,16 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Text from '../atoms/Text'
-
-const TextBlock = ({ header: Header, headerTitle, children }) => (
+const DemoBlock = ({ header: Header, headerTitle, children }) => (
     <Container>
         {Header && <Header>{headerTitle}</Header>}
-        <Text>{children}</Text>
+        {children}
     </Container>
 )
 
-export default TextBlock
+export default DemoBlock
 
 const Container = styled.div`
     grid-area: info;
@@ -19,4 +17,5 @@ const Container = styled.div`
     font-size: 14px;
     font-weight: 100;
     padding: 16px 0;
+    place-self: center;
 `

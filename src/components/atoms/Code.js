@@ -1,17 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const Code = ({ children }) => (
-    <Pre className="prettyprint">
-        <code>{children}</code>
-    </Pre>
+    <SyntaxHighlighter 
+        language="javascript" 
+        style={prism}
+        customStyle={style} 
+        codeTagProps={codeProps}>
+        {children}
+    </SyntaxHighlighter>
 )
 
 export default Code
 
-const Pre = styled.pre`
-    display: inline-block;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-`
+const style = {
+    backgroundColor: "white",
+    padding: 0,
+    margin: 0,
+}
+
+const codeProps = {
+    style: {}
+}

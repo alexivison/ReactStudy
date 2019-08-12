@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Header from '../atoms/Header'
+import { White } from '../styles/colors'
 
 const SectionHeader = ({ text }) => {
     return (
@@ -16,5 +17,5 @@ export default SectionHeader
 const Container = styled.div`
     grid-area: header;
     padding: 20px 0px;
-    border-bottom: 1px solid #757575;
+    border-bottom: 2px solid ${White};
 `

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { White } from '../styles/colors'
+
 const withHeader = (HeaderComponent) => ([props, _]) => {
     const children = props.children
 
@@ -22,7 +24,7 @@ export default Header
 const BaseHeader = styled.h1`
     margin: 0;
     line-height: 1;
-    color: white;
+    color: ${White};
 `
 
 const Header1 = styled(BaseHeader)`
@@ -35,7 +37,6 @@ const Header2 = styled(BaseHeader)`
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 8px;
-    border-bottom: 1px solid #02d0f5;
 `
 
 const Header3 = styled(BaseHeader)`

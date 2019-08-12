@@ -6,7 +6,7 @@ const SidebarList = ({ items, sidebarActive }) => {
     return items ? (
         <List display={sidebarActive.toString()}>
             {items.map((item, index) =>
-                <Link key={item.title} to={`#${item.linkTo}`} display={sidebarActive.toString()}>
+                <Link key={item.title} to={`${item.path}#${item.linkTo}`} display={sidebarActive.toString()}>
                     <li>{item.title}</li>
                 </Link>
             )}

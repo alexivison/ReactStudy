@@ -4,12 +4,11 @@ import styled from 'styled-components'
 
 import Routes from './router/routes'
 
-import Sidebar from './components/organisms/Sidebar'
+import { White } from './components/styles/colors'
 
 const App = () => (
     <Container>
         <Router>
-            <Sidebar />
             <Routes />
         </Router>
     </Container>
@@ -23,4 +22,5 @@ const Container = styled.div`
     grid-template-areas:
         'sidebar contents contents'
         'sidebar contents contents';
+    color: ${White}
 `
