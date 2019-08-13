@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Header from '../atoms/Header'
-import { White } from '../styles/colors'
 
-const SectionHeader = ({ text }) => {
+const PageHeader = ({ text }) => {
     return (
         <Container>
             <Header.H1>{text}</Header.H1>
@@ -12,10 +11,10 @@ const SectionHeader = ({ text }) => {
     )
 }
 
-export default SectionHeader
+export default PageHeader
 
 const Container = styled.div`
     grid-area: header;
     padding: 20px 0px;
-    border-bottom: 2px solid ${White};
+    border-bottom: 2px solid #565358;
 `

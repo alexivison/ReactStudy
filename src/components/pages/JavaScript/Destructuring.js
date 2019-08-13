@@ -1,52 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import { baseObject, objectDestructuring, objectRenaming, multilayerObjects, restObject, baseArray, arrayDestructuring, restArray } from './Code'
 
 import Section from '../../organisms/Section'
-
 import TextBlock from '../../molecules/TextBlock'
 import CodeBlock from '../../molecules/CodeBlock'
 import Header from '../../atoms/Header'
 
-const baseObject = `
-const object = {
-    id: 1,
-    title: "Hoge"
-}
-`
-
-const objectDestructuring = `
-// 平成
-console.log("Id: " + object.id, "Title: " + object.title)
-
-
-// 令和
-const { id, title } = object
-console.log("Id: " + id, "Title: " + title)
-`
-
-const objectRenaming = `
-// 平成
-const identifier = object.id
-console.log("Id: " + object.id, "Title: " + object.title)
-
-
-// 令和
-const { id: identifier, title } = object
-console.log("Id: " + identifier, "Title: " + title)
-`
-
-const multilayerObjects = `
-const { profile: { id, name } } = data
-`
-
-const baseArray = `
-const array = ["hoge", "hage", "hige"]
-`
-
-const arrayDestructuring = ``
-
 const Destructuring = () => (
-    <>
-        <Section id="destructuring">
+    <Container id="destructuring">
+        <Section>
             <TextBlock header={Header.H2} headerTitle="Destructuring">
                 {`
                 英語でこう書くとかっこよく聞こえるかもしれないけど、まーただの分割ってことだ。
@@ -76,12 +40,18 @@ const Destructuring = () => (
                 {`
                 具体的にどういうことかというと、こっちの例ちょっと見ようか。
                 平成のエンジニアはいつも通り.で繋いでいくんだけど、例話の若手エンジニアはもうそういうの聞いたこともないし、普通にobjectをdestructureしてるね。
+                `}
+            </TextBlock>
+            <CodeBlock>{objectDestructuring}</CodeBlock>
+        </Section>
 
+        <Section>
+            <TextBlock>
+                {`
                 こんなレベルだったらまーぶっちゃけどっちでもいいじゃんってなるけど、
                 上司からなぜか変数名は id じゃなくてこれから identifier で行こう！ってゆー謎の命令が来た時にどうすればいいの？
                 `}
             </TextBlock>
-            <CodeBlock>{objectDestructuring}</CodeBlock>
         </Section>
 
         <Section>
@@ -100,14 +70,30 @@ const Destructuring = () => (
                 「ちょっとまった！」と平成さんが叫びました。「Objectの中にObjectの中の値などってどうやってとるっていうんだ！！」
 
                 あ、それね。それも簡単だ。
+                `}
+            </TextBlock>
+        </Section>
 
+        <Section>
+            <TextBlock>
+                {`
                 もちろん平成さんでも令和くんでも、ここで気をつけないといけないのは
                 途中で値が null だったり undefined だったりすること。気にせず実際に存在しない親の子供を取ろうとすると、世界が終わるんですよ。
 
                 それについて、if分地獄にならないように、optional-chainingが可能になるプラグインを入れるのがオススメっす。
                 `}
             </TextBlock>
-            <CodeBlock>{multilayerObjects}</CodeBlock>
+            <CodeBlock showDivider={false}>{multilayerObjects}</CodeBlock>
+        </Section>
+
+        <Section>
+            <TextBlock>
+                {`
+                あと、React使ってる人ならみたことあると思うんだけど、...props 的な部分も実は destructuring だ。
+                撮りたいキーをとって、残りの値をそのまま残された Object を作ってくれるって便利なハンドラーだ。生のJSの場合、...rest が結構使われてる。
+                `}
+            </TextBlock>
+            <CodeBlock>{restObject}</CodeBlock>
         </Section>
 
         <Section>
@@ -126,11 +112,36 @@ const Destructuring = () => (
             <TextBlock header={Header.H3} headerTitle="Arrays">
                 {`
                 ですね。まーObjectとほぼ一緒だから大丈夫だと思うけど
+
+                HooksとかReduxとか触ったことある人はおそらく見覚えあると思うし、かなり一般的になってるからここでちょっと紹介しちゃおうかなと思って <3 この配列を例にとって、destructureしていこう
                 `}
             </TextBlock>
-            <CodeBlock>{baseArray}</CodeBlock>
+            <CodeBlock showDivider={false}>{baseArray}</CodeBlock>
         </Section>
-    </>
+
+        <Section>
+            <TextBlock>
+                {`
+                Objectと違って、配列の場合キーとかないから、destructureする時自分で参照名をつけるんだ。
+
+                例えばここで first と second って付けてるけど、別になんでもありっちゃありだな。
+                `}
+            </TextBlock>
+            <CodeBlock showDivider={false}>{arrayDestructuring}</CodeBlock>
+        </Section>
+
+        <Section>
+            <TextBlock>
+                {`
+                「...」ハンドラーもObjectと同じ動きしてるから、割とまじでObjectをマスターすれば配列も行けちゃう
+                `}
+            </TextBlock>
+            <CodeBlock>{restArray}</CodeBlock>
+        </Section>
+
+    </Container>
 )
 
 export default Destructuring
+
+const Container = styled.div``

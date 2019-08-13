@@ -4,11 +4,11 @@ import Destructuring from './Destructuring'
 import ArrowFunctions from './ArrowFunctions'
 import AsyncAwait from './AsyncAwait'
 
-import SectionHeader from '../../molecules/SectionHeader'
+import PageHeader from '../../molecules/PageHeader'
 
 const JavaScript = () => (
     <>
-        <SectionHeader text="JavaScriptの基本" />
+        <PageHeader text="JavaScriptの基本" />
         <ArrowFunctions />
         <Destructuring />
         <AsyncAwait />

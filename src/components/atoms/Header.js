@@ -36,11 +36,11 @@ const Header2 = styled(BaseHeader)`
     display: inline-block;
     font-size: 20px;
     font-weight: 500;
-    padding-bottom: 8px;
+    padding: 8px 0;
 `
 
 const Header3 = styled(BaseHeader)`
-    margin: 0 0 8px 0;
     font-size: 18px;
     font-weight: 300;
+    padding: 8px 0;
 `

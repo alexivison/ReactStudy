@@ -22,7 +22,7 @@ export default Section
 
 const Container = styled.div`
     display: grid;
-    grid-auto-columns: 2fr 1fr 1fr;
+    grid-auto-columns: 2fr 2fr 1fr;
     grid-template-areas:
         'header header header'
         'info code code'
@@ -34,5 +34,5 @@ const CodePlaceholder = styled.div`
     grid-area: code;
     padding: 0px 16px;
     background-color: white;
-    box-shadow: inset 16px 0px 8px -16px #0000009e;
+    box-shadow: inset 16px 0px 8px -16px #3a3a3aed;
 `

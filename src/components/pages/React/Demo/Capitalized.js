@@ -5,9 +5,9 @@ export const Capitalized = ({ header, onClick }) => {
         const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
 
         return (
-            <h1 onClick={onClick} style={onClick && { cursor: "pointer" }}>
+            <h2 onClick={onClick} style={{ cursor: onClick && "pointer", margin: 0, paddingBottom: 16 }}>
                 {capitalized}
-            </h1>
+            </h2>
         )
     } else {
         return null

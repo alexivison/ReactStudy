@@ -8,7 +8,7 @@ const Code = ({ children }) => (
         style={prism}
         customStyle={style} 
         codeTagProps={codeProps}>
-        {children}
+        {children.trim()}
     </SyntaxHighlighter>
 )
 
@@ -16,7 +16,7 @@ export default Code
 
 const style = {
     backgroundColor: "white",
-    padding: 0,
+    padding: "24px 0",
     margin: 0,
 }
 

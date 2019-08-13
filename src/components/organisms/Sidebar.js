@@ -44,16 +44,10 @@ const Sidebar = ({ location }) => {
         <Container width={width} onMouseEnter={toggleSidebar} onMouseLeave={toggleSidebar}>
             <MenuItem>
             <Link to="/">
-                    <LinkImage src={HomeIcon} size={32}/>
+                    <LinkImage src={HomeIcon} size={32} path="" currentPath={currentPath} />
                     <LinkTitle>ホーム</LinkTitle>
                 </Link>
             </MenuItem>
-            {/* <Item>
-                <Link to="/">
-                    <LinkImage src={HomeIcon} size={32}/>
-                    <LinkTitle>ホーム</LinkTitle>
-                </Link>
-            </Item> */}
             <Item>
                 <Link to="/javascript">
                     <LinkImage src={JSLogo} size={32} path="javascript" currentPath={currentPath} />
@@ -100,7 +94,7 @@ const Item = styled.div`
 
 const MenuItem = styled(Item)`
     padding: 16px 0;
-    border-bottom: 1px solid #757575;
+    border-bottom: 2px solid #565358;
 `
 
 const LinkImage = styled(Image)`

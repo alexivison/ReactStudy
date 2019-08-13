@@ -1,12 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+
+import PageHeader from '../../molecules/PageHeader'
 
 const ReduxPage = () => (
-    <Container>
-        TBA
-    </Container>
+    <>
+        <PageHeader text="WIP" />
+    </>
 )
 
 export default ReduxPage
-
-const Container = styled.div``

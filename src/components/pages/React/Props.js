@@ -1,5 +1,7 @@
 import React from 'react'
+import styled from 'styled-components'
 
+import { exampleComponent, exampleSource, exampleSourceOnClick, exampleComponentError, exampleComponentOnClick } from './Code'
 import { Capitalized } from './Demo'
 
 import Section from '../../organisms/Section'
@@ -9,8 +11,8 @@ import DemoBlock from '../../molecules/DemoBlock'
 import Header from '../../atoms/Header'
 
 const PropsPage = () => (
-    <>
-        <Section id="props">
+    <Container id="props">
+        <Section>
             <TextBlock header={Header.H2} headerTitle="Propsとは">
                 {`
                 簡単にいうと、親が子供に渡してる情報ってことだね。
@@ -22,30 +24,14 @@ const PropsPage = () => (
                 （一応型チェック入れてるけどTSとかだったらなくても良いからいいよね）
                 `}
             </TextBlock>
-            <CodeBlock>
-                {`
-<Capitalized header="hoge" />
-                `}
-            </CodeBlock>
+            <CodeBlock>{exampleSource}</CodeBlock>
         </Section>
 
         <Section>
             <DemoBlock>
                 <Capitalized header="hoge" />
             </DemoBlock>
-            <CodeBlock>
-                {`
-const Capitalized = ({ header }) => {
-    if (typeof header === 'string') {
-        const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
-
-        return (<h1>{capitalized}</h1>)
-    } else {
-        return null
-    }
-}
-                `}
-            </CodeBlock>
+            <CodeBlock>{exampleComponent}</CodeBlock>
         </Section>
 
         <Section>
@@ -56,44 +42,22 @@ const Capitalized = ({ header }) => {
                 前のコンポーネントを少し修正して、clickableにしてみた。で、ヘッダーが押された時なぜかアラートを出したいなって気持ちになった。
                 `}
             </TextBlock>
-            <CodeBlock>
-                {`
-const Capitalized = ({ header, onClick }) => {
-    if (typeof header === 'string') {
-        const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
-
-        return (
-            <h1 onClick={onClick} style={onClick && { cursor: "pointer" }}>
-                {capitalized}
-            </h1>
-        )
-    } else {
-        return null
-    }
-}
-                `}
-            </CodeBlock>
+            <CodeBlock showDivider={false}>{exampleSourceOnClick}</CodeBlock>
         </Section>
 
         <Section>
             <TextBlock>
                 {`
-                さて、onClickハンドラーにアラートを渡して終わりじゃん。
-
-                と思いきや！！押してないのに出るし、そもそも押せるようになってないし！！
+                さて、onClickハンドラーにアラートを渡して終わりじゃん...
                 `}
             </TextBlock>
-            <CodeBlock>
-                {`
-<Capitalized header="clickable hoge" onClick={alert("Clicked")} />
-                `}
-            </CodeBlock>
+            <CodeBlock>{exampleComponentError}</CodeBlock>
         </Section>
 
         <Section>
             <TextBlock>
                 {`
-                なんと。失敗した。なんでだ？
+                と思いきや！！押してないのに出るし、そもそも押せるようになってないし！！なんと。失敗した。なんでだ？
 
                 それそうでしょ、渡された瞬間実行されたからだ。簡単なコンポーネントでよかった。renderとかで同じような事故起きたら無限ループになる可能性があるから気をつけんとな。
 
@@ -105,31 +69,22 @@ const Capitalized = ({ header, onClick }) => {
         <Section>
             <TextBlock>
                 {`
-                これならどうだ？
+                今回の場合、呼ばれたらアラートを実行する関数にして、propとして渡せばもう完璧。
+
+                触ったばかりの時にかなりハマってたな、ワシも。まー覚えちゃえばもう大丈夫ってことだからね。
                 `}
             </TextBlock>
-            <CodeBlock>
-                {`
-<Capitalized header="clickable hoge" onClick={() => alert("Clicked")} />
-                `}
-            </CodeBlock>
         </Section>
 
         <Section>
             <DemoBlock>
                 <Capitalized header="clickable hoge" onClick={() => alert("Clicked")} />
             </DemoBlock>
-            <CodeBlock>
-                {`
-// BAD: onClick={alert("Clicked")}
-//
-// GOOD: onClick={() => alert("Clicked")}
-
-<Capitalized header="clickable hoge" onClick={() => alert("Clicked")} />
-                `}
-            </CodeBlock>
+            <CodeBlock>{exampleComponentOnClick}</CodeBlock>
         </Section>
-    </>
+    </Container>
 )
 
 export default PropsPage
+
+const Container = styled.div``

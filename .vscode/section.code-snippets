@@ -24,7 +24,7 @@
 			"    <TextBlock>",
 			"        {``}",
 			"    </TextBlock>",
-			"    <CodeBlock></CodeBlock>",
+			"    <CodeBlock>{``}</CodeBlock>",
 			"</Section>"
 		],
 		"description": "Create a new section with a Text -and CodeBlock"
@@ -43,15 +43,13 @@
 	},
 
 	"Demo Default": {
-		"prefix": "code section",
+		"prefix": "demo section",
 		"body": [
 			"<Section>",
-			"    <TextBlock>",
-			"        {``}",
-			"    </TextBlock>",
 			"    <DemoBlock>",
 			"        {/* Add your demo components here. They will be rendered normally */}",
 			"    </DemoBlock>",
+			"    <CodeBlock>{``}</CodeBlock>",
 			"</Section>"
 		],
 		"description": "Create a new section with a Text -and CodeBlock"

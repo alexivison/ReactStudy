@@ -5,11 +5,11 @@ import State from './State'
 import StyledComponents from './StyledComponents'
 import ReactRouter from './ReactRouter'
 
-import SectionHeader from '../../molecules/SectionHeader'
+import PageHeader from '../../molecules/PageHeader'
 
 const ReactPage = () => (
     <>
-        <SectionHeader text="Reactの基本" />
+        <PageHeader text="Reactの基本" />
         <Props />
         <State />
         <StyledComponents />

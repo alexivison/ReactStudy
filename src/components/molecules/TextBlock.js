@@ -6,7 +6,7 @@ import Text from '../atoms/Text'
 const TextBlock = ({ header: Header, headerTitle, children }) => (
     <Container>
         {Header && <Header>{headerTitle}</Header>}
-        <Text>{children}</Text>
+        <Text>{children.trim()}</Text>
     </Container>
 )
 
@@ -18,5 +18,5 @@ const Container = styled.div`
     word-break: break-word;
     font-size: 14px;
     font-weight: 100;
-    padding: 16px 0;
+    padding: 8px 0;
 `
