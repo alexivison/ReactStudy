@@ -13,15 +13,14 @@ import Header from '../../atoms/Header'
 const PropsPage = () => (
     <Container id="props">
         <Section>
-            <TextBlock header={Header.H2} headerTitle="Propsとは">
+            <TextBlock header={Header.H2} headerTitle="Props">
                 {`
                 簡単にいうと、親が子供に渡してる情報ってことだね。
 
                 右には超簡単な先頭文字を大文字に変換するふざけたコンポーネントあるんだけど
-                こいつの場合、headerはpropで値はhogeだ。JavaScriptだから型は曖昧なもだけど、一応headerの型はStringになる。
+                こいつの場合、headerというpropを欲しがってる。
 
-                下に実査のソースとコンポーネントの例があるから、参考になるんじゃねえかな
-                （一応型チェック入れてるけどTSとかだったらなくても良いからいいよね）
+                何も渡されなかった場合、null が帰ってくるんで、JSXでいうと何も表示されないってことになる。"hoge" という全く想像力のない文字列を渡してみると...
                 `}
             </TextBlock>
             <CodeBlock>{exampleSource}</CodeBlock>
@@ -37,18 +36,20 @@ const PropsPage = () => (
         <Section>
             <TextBlock>
                 {`
+                そうだね、ちゃんと先頭大文字になってるね。
+
                 これでもうpropsのほぼ全てだな。ただ、ちょっと気を付けないといけないところが一つあって、関数をpropとして渡す時にこんなケースに注意を。
 
-                前のコンポーネントを少し修正して、clickableにしてみた。で、ヘッダーが押された時なぜかアラートを出したいなって気持ちになった。
+                さっきのコンポーネントを少し修正して、clickableにしてみようかな。で、ヘッダーが押された時なぜかアラートを出したいなって気持ちにもなったから、それもやろう。
                 `}
             </TextBlock>
-            <CodeBlock showDivider={false}>{exampleSourceOnClick}</CodeBlock>
+            <CodeBlock>{exampleSourceOnClick}</CodeBlock>
         </Section>
 
         <Section>
             <TextBlock>
                 {`
-                さて、onClickハンドラーにアラートを渡して終わりじゃん...
+                さて、onClickハンドラーにアラートを渡して...
                 `}
             </TextBlock>
             <CodeBlock>{exampleComponentError}</CodeBlock>

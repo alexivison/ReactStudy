@@ -37,10 +37,12 @@ const Header2 = styled(BaseHeader)`
     font-size: 20px;
     font-weight: 500;
     padding: 8px 0;
+    margin: 0 0 8px 0;
 `
 
 const Header3 = styled(BaseHeader)`
     font-size: 18px;
     font-weight: 300;
     padding: 8px 0;
+    margin: 0 0 8px 0;
 `

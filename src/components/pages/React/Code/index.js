@@ -59,7 +59,7 @@ export const InputComponent = `
 
 export const combinedComponentSource = `
 const CapitalizedInput = () => {
-    const [header, setHeader] = useState("capitalized hoge")
+    const [header, setHeader] = useState("hoge")
 
     return (
         <div style={{ display: "grid", alignContent: "center" }}>
@@ -72,4 +72,50 @@ const CapitalizedInput = () => {
 
 export const combinedComponent = `
 <CapitalizedInput />
+`
+
+export const styledHowToUse = `
+import styled from 'styled-components'
+`
+
+export const styledVariables = `
+const Switch = styled.button\`
+    background-color: white;
+    
+    \${({ selected }) => selected &&\`
+        background-color: white;
+    \`}
+\`
+`
+
+export const styledExtending = `
+const BorderedSwitch = styled(Switch)\`
+    border: 1px solid black;
+\`
+`
+
+export const styledClassName = `
+const Normal = ({ className, children }) => (
+    <div className={className}>
+        {children}
+    </div>
+)
+
+const Styled = styled(Normal)\`
+    background-color: red;
+\`
+`
+
+export const styledPseudo = `
+const Link = styled.a\`
+    color: gray;
+
+    ::before {
+        content: '●'
+    }
+
+    :hover {
+        color: red;
+    }
+\`
 `

@@ -13,7 +13,7 @@ import Header from '../../atoms/Header'
 const State = () => (
     <Container id="state">
         <Section>
-            <TextBlock header={Header.H2} headerTitle="Stateとは">
+            <TextBlock header={Header.H2} headerTitle="State">
                 {`
                 それはね、名前の通りコンポーネントが持ってる情報の状態とのこと
                 State も props も、ただオブジェクトだけど、props と違って、state ってのはコンポーネント内でハンドリングする情報というやつ。
