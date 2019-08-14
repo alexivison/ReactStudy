@@ -28,7 +28,7 @@ const Sidebar = ({ location }) => {
         { path: "react", title: "Props", linkTo: 'props' },
         { path: "react", title: "State", linkTo: 'state' },
         { path: "react", title: "Styled Components", linkTo: 'styled' },
-        { path: "react", title: "React Router", linkTo: 'react-router' },
+        // { path: "react", title: "React Router", linkTo: 'react-router' },
     ]
 
     const reduxSubtitles = []

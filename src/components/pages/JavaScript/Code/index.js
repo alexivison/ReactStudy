@@ -48,3 +48,32 @@ export const restArray = `
 const [first, ...rest] = array
 // rest = ["hage", "hige"]
 `
+
+export const asyncFunction = `
+const asyncHoge = async () => {
+    return 42
+}
+
+asyncHoge.then(alert) // 42
+`
+
+export const awaitFunction = `
+const asyncHoge = async () => {
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("完了！！"), 1000)
+    })
+
+    const result = await promise // ここで promise が完了するまで一旦待つ
+  
+    alert(result) // "完了！"
+    }
+}
+`
+
+export const promiseAllFunction = `
+const asyncHoge = async () => {
+    await Promise.all([promise1(), promise2()])
+
+    return "完了！"
+}
+`
