@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Code from '../atoms/Code'
 
-const CodeBlock = ({ children, showDivider = true }) => {
+const CodeBlock = ({ children, code, showDivider = true }) => {
     return (
         <Container>
             <Code>{children}</Code>

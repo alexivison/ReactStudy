@@ -1,11 +1,11 @@
 import React from 'react'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const Code = ({ children }) => (
     <SyntaxHighlighter 
         language="javascript" 
-        style={github}
+        style={prism}
         customStyle={style} 
         codeTagProps={codeProps}
     >

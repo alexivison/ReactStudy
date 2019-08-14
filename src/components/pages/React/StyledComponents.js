@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { styledHowToUse, styledVariables, styledExtending, styledPseudo, styledClassName } from './Code'
+import { styledHowToUse, styledVariables, styledExtending, styledPseudo, styledClassName, styledVariablesAttrs } from './Code'
 
 import Section from '../../organisms/Section'
 import TextBlock from '../../molecules/TextBlock'
@@ -58,9 +58,24 @@ const StyledComponents = () => (
         </Section>
 
         <Section>
+            <TextBlock>
+                {`
+                あんまり使うことないと思うけど、
+
+                デフォの値とか、事前に計算された値などをスタイルのところに渡したい場合、.attrs というオプションも用意してあるよ。
+
+                あと、HTML そのままのタグ（src、valueなど）をどうしてもカスタムにしたいんであれば、.attrs でキャッチして色々ごちゃごちゃはできるけど、
+
+                そもそも props のネーミングでそういうケースにならないようにも修正できるから、注意して使おうぜ
+                `}
+            </TextBlock>
+            <CodeBlock>{styledVariablesAttrs}</CodeBlock>
+        </Section>
+
+        <Section>
             <TextBlock header={Header.H3} headerTitle="Extending">
                 {`
-                すでに存在する Styled component に元のスタイルを崩さないように新しいの追加したい場合、styled の引数
+                すでに存在する Styled component に元のスタイルを崩さないように新しいの追加したい場合、styled の引数コンポーネントを渡して、追加したいスタイルを追加してフィニッシュ！
                 `}
             </TextBlock>
             <CodeBlock>{styledExtending}</CodeBlock>
@@ -68,14 +83,22 @@ const StyledComponents = () => (
 
         <Section>
             <TextBlock header={Header.H3} headerTitle="ClassName">
-                {``}
+                {`
+                Styled componentじゃないコンポーネントにスタイルを入れたい場合は、className という prop をスタイリングしたいやつに渡さないといけない。
+
+                そうすれば普通に extend できるようになるから最＆高っすよね。
+                `}
             </TextBlock>
             <CodeBlock>{styledClassName}</CodeBlock>
         </Section>
 
         <Section>
             <TextBlock header={Header.H3} headerTitle="Pseudo Elements">
-                {``}
+                {`
+                CSSと同じように Pseudo elements ももちろん使える。
+
+                他にも nth:child() とかも全然使用可能だし、子供にスタイルを inject するのもで行けちゃうからCSSの知識は役にたつと思う。
+                `}
             </TextBlock>
             <CodeBlock>{styledPseudo}</CodeBlock>
         </Section>

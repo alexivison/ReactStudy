@@ -78,13 +78,27 @@ export const styledHowToUse = `
 import styled from 'styled-components'
 `
 
+// TODO: この . がないとrenderがこけるの直す
 export const styledVariables = `
-const Switch = styled.button\`
+const Switch = styled.button.\`
     background-color: white;
-    
+
     \${({ selected }) => selected &&\`
-        background-color: white;
+        background-color: red;
     \`}
+\`
+`
+
+export const styledVariablesAttrs = `
+const Input = styled.input.attrs({ size } => ({
+    type: "password",
+    size: size || 8,
+  }))\`
+    border: 2px solid black;
+    border-radius: 8px;
+
+    margin: \${({ size }) => size};
+    padding: \${({ size }) => size};
 \`
 `
 
