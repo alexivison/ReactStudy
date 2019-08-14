@@ -11,13 +11,13 @@ import { Black } from '../components/styles/colors'
 
 const Routes = () => (
     <>
-    <Route path="/"component={Sidebar} />
-    <Container>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/javascript" component={JavaScriptPage} />
-        <Route path="/react" component={ReactPage} />
-        <Route path="/redux" component={ReduxPage} />
-    </Container>
+        <Route path="/"component={Sidebar} />
+        <Container>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/javascript" component={JavaScriptPage} />
+            <Route path="/react" component={ReactPage} />
+            <Route path="/redux" component={ReduxPage} />
+        </Container>
     </>
 )
 

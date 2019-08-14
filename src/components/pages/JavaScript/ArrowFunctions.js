@@ -44,7 +44,7 @@ const ArrowFunctions = () => (
                 ほぼこれで終わりだけど、結構よく出てくる例もう一個あげようと思って、関数を返す関数ってやつだ。
                 `}
             </TextBlock>
-            <CodeBlock showDivider={false}>{arrowFunctions}</CodeBlock>
+            <CodeBlock code={arrowFunctions} showDivider={false} />
         </Section>
 
         <Section>
@@ -59,7 +59,7 @@ const ArrowFunctions = () => (
                 では、最後に、() => と functionの違いを少しだけ見てみようか。
                 `}
             </TextBlock>
-            <CodeBlock>{returningFuntions}</CodeBlock>
+            <CodeBlock code={returningFuntions} />
         </Section>
 
         <Section>
@@ -73,7 +73,7 @@ const ArrowFunctions = () => (
                 じゃー同じやつをES6っぽくするとどうなるんだろう
                 `}
             </TextBlock>
-            <CodeBlock showDivider={false}>{bindingOfThisES5}</CodeBlock>
+            <CodeBlock code={bindingOfThisES5} showDivider={false} />
         </Section>
 
         <Section>
@@ -85,7 +85,7 @@ const ArrowFunctions = () => (
                 一応覚えといた方が無駄じゃないと思う。
                 `}
             </TextBlock>
-            <CodeBlock>{bindingOfThisES6}</CodeBlock>
+            <CodeBlock code={bindingOfThisES6} />
         </Section>
 
     </Container>

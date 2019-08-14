@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 import Code from '../atoms/Code'
 
-const CodeBlock = ({ children, code, showDivider = true }) => {
+const CodeBlock = ({ code, showDivider = true }) => {
     return (
         <Container>
-            <Code>{children}</Code>
+            <Code value={code} />
             {showDivider && <Divider />}
         </Container>
     )

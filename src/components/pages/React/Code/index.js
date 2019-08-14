@@ -4,29 +4,21 @@ export const exampleComponent = `
 
 export const exampleSource = `
 const Capitalized = ({ header }) => {
-    if (typeof header === 'string') {
-        const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
+    const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
 
-        return <h2>{capitalized}</h2>
-    } else {
-        return null
-    }
+    return <h2>{capitalized}</h2>
 }
 `
 
 export const exampleSourceOnClick = `
 const Capitalized = ({ header, onClick }) => {
-    if (typeof header === 'string') {
-        const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
+    const capitalized = header.charAt(0).toUpperCase() + header.slice(1)
 
-        return (
-            <h2 onClick={onClick} style={{ cursor: onClick && "pointer", margin: 0, paddingBottom: 16 }}>
-                {capitalized}
-            </h2>
-        )
-    } else {
-        return null
-    }
+    return (
+        <h2 onClick={onClick} style={{ cursor: onClick && "pointer", margin: 0, paddingBottom: 16 }}>
+            {capitalized}
+        </h2>
+    )
 }
 `
 

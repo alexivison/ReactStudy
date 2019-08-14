@@ -23,14 +23,14 @@ const PropsPage = () => (
                 何も渡されなかった場合、null が帰ってくるんで、JSXでいうと何も表示されないってことになる。"hoge" という全く想像力のない文字列を渡してみると...
                 `}
             </TextBlock>
-            <CodeBlock>{exampleSource}</CodeBlock>
+            <CodeBlock code={exampleSource} />
         </Section>
 
         <Section>
             <DemoBlock>
                 <Capitalized header="hoge" />
             </DemoBlock>
-            <CodeBlock>{exampleComponent}</CodeBlock>
+            <CodeBlock code={exampleComponent} />
         </Section>
 
         <Section>
@@ -43,7 +43,7 @@ const PropsPage = () => (
                 さっきのコンポーネントを少し修正して、clickableにしてみようかな。で、ヘッダーが押された時なぜかアラートを出したいなって気持ちにもなったから、それもやろう。
                 `}
             </TextBlock>
-            <CodeBlock>{exampleSourceOnClick}</CodeBlock>
+            <CodeBlock code={exampleSourceOnClick} />
         </Section>
 
         <Section>
@@ -52,7 +52,7 @@ const PropsPage = () => (
                 さて、onClickハンドラーにアラートを渡して...
                 `}
             </TextBlock>
-            <CodeBlock>{exampleComponentError}</CodeBlock>
+            <CodeBlock code={exampleComponentError} />
         </Section>
 
         <Section>
@@ -81,7 +81,7 @@ const PropsPage = () => (
             <DemoBlock>
                 <Capitalized header="clickable hoge" onClick={() => alert("Clicked")} />
             </DemoBlock>
-            <CodeBlock>{exampleComponentOnClick}</CodeBlock>
+            <CodeBlock code={exampleComponentOnClick} />
         </Section>
     </Container>
 )

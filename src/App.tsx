@@ -18,7 +18,7 @@ export default App
 
 const Container = styled.div`
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: 200px 1fr;
     grid-template-areas:
         'sidebar contents contents'
         'sidebar contents contents';

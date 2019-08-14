@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 import Text from '../atoms/Text'
 
-const TextBlock = ({ header: Header, headerTitle, children }) => (
+interface Props {
+    header: FunctionComponent,
+    headerTitle: string,
+    children: string,
+}
+
+const TextBlock: FunctionComponent<Props> = ({ header: Header, headerTitle, children }) => (
     <Container>
         {Header && <Header>{headerTitle}</Header>}
         <Text>{children.trim()}</Text>

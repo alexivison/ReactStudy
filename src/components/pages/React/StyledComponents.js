@@ -43,7 +43,7 @@ const StyledComponents = () => (
                 で、これからはベストな部分だな。よくみると、スタイルって Template Strings で定義してることがわかるよね。とゆーことはーーー？
                 `}
             </TextBlock>
-            <CodeBlock>{styledHowToUse}</CodeBlock>
+            <CodeBlock code={styledHowToUse} />
         </Section>
 
         <Section>
@@ -54,7 +54,7 @@ const StyledComponents = () => (
                  渡せらた props によってスタイル変えたりすることが出来ちゃうからもうこれほぼなんでも作れるじゃんってなるよね。生のCSSなんて古いっす。
                 `}
             </TextBlock>
-            <CodeBlock>{styledVariables}</CodeBlock>
+            <CodeBlock code={styledVariables} />
         </Section>
 
         <Section>
@@ -69,7 +69,7 @@ const StyledComponents = () => (
                 そもそも props のネーミングでそういうケースにならないようにも修正できるから、注意して使おうぜ
                 `}
             </TextBlock>
-            <CodeBlock>{styledVariablesAttrs}</CodeBlock>
+            <CodeBlock code={styledVariablesAttrs} />
         </Section>
 
         <Section>
@@ -78,7 +78,7 @@ const StyledComponents = () => (
                 すでに存在する Styled component に元のスタイルを崩さないように新しいの追加したい場合、styled の引数コンポーネントを渡して、追加したいスタイルを追加してフィニッシュ！
                 `}
             </TextBlock>
-            <CodeBlock>{styledExtending}</CodeBlock>
+            <CodeBlock code={styledExtending} />
         </Section>
 
         <Section>
@@ -89,7 +89,7 @@ const StyledComponents = () => (
                 そうすれば普通に extend できるようになるから最＆高っすよね。
                 `}
             </TextBlock>
-            <CodeBlock>{styledClassName}</CodeBlock>
+            <CodeBlock code={styledClassName} />
         </Section>
 
         <Section>
@@ -100,7 +100,7 @@ const StyledComponents = () => (
                 他にも nth:child() とかも全然使用可能だし、子供にスタイルを inject するのもで行けちゃうからCSSの知識は役にたつと思う。
                 `}
             </TextBlock>
-            <CodeBlock>{styledPseudo}</CodeBlock>
+            <CodeBlock code={styledPseudo} />
         </Section>
 
     </Container>

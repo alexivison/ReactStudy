@@ -32,7 +32,7 @@ const AsyncAwait = () => (
                 あとね、async を関数につけると、非同期じゃなくて同期処理になるから、若干普通の関数より遅くなったりする可能性はある。
                 `}
             </TextBlock>
-            <CodeBlock>{asyncFunction}</CodeBlock>
+            <CodeBlock code={asyncFunction} />
         </Section>
 
         <Section>
@@ -43,7 +43,7 @@ const AsyncAwait = () => (
                 Promise が解決することを待って、終わったら次行くって感じ。かなり分かりやすいっしょ。
                 `}
             </TextBlock>
-            <CodeBlock>{awaitFunction}</CodeBlock>
+            <CodeBlock code={awaitFunction} />
         </Section>
 
         <Section>
@@ -56,7 +56,7 @@ const AsyncAwait = () => (
                 一個一個 await するのだるいし、わざわざ待ちたい関数を変数でラップしてタイマー的な付けたりしないと同期になっちゃうからまさに神からの gift ですよ、これ
                 `}
             </TextBlock>
-            <CodeBlock>{promiseAllFunction}</CodeBlock>
+            <CodeBlock code={promiseAllFunction} />
         </Section>
         
         <Section>

@@ -32,7 +32,7 @@ const Destructuring = () => (
                 例えば、こういうオブジェクトあるとするじゃん。こいつの中からちょっと色々取り出していこう
                 `}
             </TextBlock>
-            <CodeBlock>{baseObject}</CodeBlock>
+            <CodeBlock code={baseObject} />
         </Section>
 
         <Section>
@@ -42,7 +42,7 @@ const Destructuring = () => (
                 平成のエンジニアはいつも通り.で繋いでいくんだけど、例話の若手エンジニアはもうそういうの聞いたこともないし、普通にobjectをdestructureしてるね。
                 `}
             </TextBlock>
-            <CodeBlock>{objectDestructuring}</CodeBlock>
+            <CodeBlock code={objectDestructuring} />
         </Section>
 
         <Section>
@@ -61,7 +61,7 @@ const Destructuring = () => (
                 令和くんはささーっとdestructureした変数に別の名前付けただけで終わったな。
                 `}
             </TextBlock>
-            <CodeBlock>{objectRenaming}</CodeBlock>
+            <CodeBlock code={objectRenaming} />
         </Section>
 
         <Section>
@@ -83,7 +83,7 @@ const Destructuring = () => (
                 それについて、if分地獄にならないように、optional-chainingが可能になるプラグインを入れるのがオススメっす。
                 `}
             </TextBlock>
-            <CodeBlock showDivider={false}>{multilayerObjects}</CodeBlock>
+            <CodeBlock code={multilayerObjects} showDivider={false} />
         </Section>
 
         <Section>
@@ -93,7 +93,7 @@ const Destructuring = () => (
                 撮りたいキーをとって、残りの値をそのまま残された Object を作ってくれるって便利なハンドラーだ。生のJSの場合、...rest が結構使われてる。
                 `}
             </TextBlock>
-            <CodeBlock>{restObject}</CodeBlock>
+            <CodeBlock code={restObject} />
         </Section>
 
         <Section>
@@ -116,7 +116,7 @@ const Destructuring = () => (
                 HooksとかReduxとか触ったことある人はおそらく見覚えあると思うし、かなり一般的になってるからここでちょっと紹介しちゃおうかなと思って <3 この配列を例にとって、destructureしていこう
                 `}
             </TextBlock>
-            <CodeBlock showDivider={false}>{baseArray}</CodeBlock>
+            <CodeBlock code={baseArray} showDivider={false} />
         </Section>
 
         <Section>
@@ -127,7 +127,7 @@ const Destructuring = () => (
                 例えばここで first と second って付けてるけど、別になんでもありっちゃありだな。
                 `}
             </TextBlock>
-            <CodeBlock showDivider={false}>{arrayDestructuring}</CodeBlock>
+            <CodeBlock code={arrayDestructuring} showDivider={false} />
         </Section>
 
         <Section>
@@ -136,7 +136,7 @@ const Destructuring = () => (
                 「...」ハンドラーもObjectと同じ動きしてるから、割とまじでObjectをマスターすれば配列も行けちゃう
                 `}
             </TextBlock>
-            <CodeBlock>{restArray}</CodeBlock>
+            <CodeBlock code={restArray} />
         </Section>
 
     </Container>

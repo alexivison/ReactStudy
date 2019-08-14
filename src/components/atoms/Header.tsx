@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 import { White } from '../styles/colors'
 
-const withHeader = (HeaderComponent) => ([props, _]) => {
+interface Props {
+    HeaderComponent: FunctionComponent
+}
+
+const withHeader = (HeaderComponent: FunctionComponent) => ([props, _]) => {
     const children = props.children
 
     if (typeof children == 'string') {
-        return <HeaderComponent {...props}/>
+        return <HeaderComponent {...props} />
     } else {
         return null
     }
 }
 
 const Header = {
-  H1: (...props) => withHeader(Header1)(props),
-  H2: (...props) => withHeader(Header2)(props),
-  H3: (...props) => withHeader(Header3)(props),
+    H1: (...props) => withHeader(Header1)(props),
+    H2: (...props) => withHeader(Header2)(props),
+    H3: (...props) => withHeader(Header3)(props),
 }
 
 export default Header

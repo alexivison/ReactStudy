@@ -41,14 +41,14 @@ const State = () => (
                 まーすっげえダサいの出来あがったけどな。
                 `}
             </TextBlock>
-            <CodeBlock>{stateExample}</CodeBlock>
+            <CodeBlock code={stateExample} />
         </Section>
 
         <Section>
             <DemoBlock>
                 <UserInput onSubmit={(text) => alert(text)} />
             </DemoBlock>
-            <CodeBlock>{InputComponent}</CodeBlock>
+            <CodeBlock code={InputComponent} />
         </Section>
 
         <Section>
@@ -61,7 +61,7 @@ const State = () => (
                 なんと、実際に触れるものが出来上がりました！state も props も利用してる React Component を作ることに セイコウ シマシタ！（外国人っぽい発音）
                 `}
             </TextBlock>
-            <CodeBlock>{combinedComponentSource}</CodeBlock>
+            <CodeBlock code={combinedComponentSource} />
         </Section>
         
 
@@ -69,7 +69,7 @@ const State = () => (
             <DemoBlock>
                 <CapitalizedInput />
             </DemoBlock>
-            <CodeBlock>{combinedComponent}</CodeBlock>
+            <CodeBlock code={combinedComponent} />
         </Section>
 
         <Section>
