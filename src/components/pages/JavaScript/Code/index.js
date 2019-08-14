@@ -1,3 +1,45 @@
+export const arrowFunctions = `
+// 平成
+function hoge() {
+    return console.log("Hoge")
+}
+
+// 令和
+const hoge = () => console.log("Hoge")
+`
+
+export const returningFuntions = `
+// 平成
+function hoge() {
+    return function() {
+        return console.log("Hoge")
+    }
+}
+
+// 令和
+const hoge = () => () => console.log("Hoge")
+`
+
+export const bindingOfThisES5 = `
+const object = {
+    id: 42,
+    counter: function() {
+        setTimeout(function() {
+            console.log("The meaning of life is: " + this.id)
+        }.bind(this), 1000)
+    }
+}
+`
+
+export const bindingOfThisES6 = `
+const object = {
+    id: 42,
+    counter: function() {
+        setTimeout(() => console.log("The meaning of life is: " + this.id)}, 1000)
+    }
+}
+`
+
 export const baseObject = `
 const post = {
     id: 1,

@@ -1,52 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { arrowFunctions, returningFuntions, bindingOfThisES5, bindingOfThisES6 } from './Code'
+
 import Section from '../../organisms/Section'
 import TextBlock from '../../molecules/TextBlock'
 import CodeBlock from '../../molecules/CodeBlock'
 import Header from '../../atoms/Header'
-
-const arrowFunctions = `
-// 平成
-function hoge() {
-    return console.log("Hoge")
-}
-
-// 令和
-const hoge = () => console.log("Hoge")
-`
-
-const returningFuntions = `
-// 平成
-function hoge() {
-    return function() {
-        return console.log("Hoge")
-    }
-}
-
-// 令和
-const hoge = () => () => console.log("Hoge")
-`
-
-const bindingOfThisES5 = `
-const object = {
-    id: 42,
-    counter: function() {
-        setTimeout(function() {
-            console.log("The meaning of life is: " + this.id)
-        }.bind(this), 1000)
-    }
-}
-`
-
-const bindingOfThisES6 = `
-const object = {
-    id: 42,
-    counter: function() {
-        setTimeout(() => console.log("The meaning of life is: " + this.id)}, 1000)
-    }
-}
-`
 
 const ArrowFunctions = () => (
     <Container id="arrow-functions">
@@ -70,23 +30,21 @@ const ArrowFunctions = () => (
 
                 ・平成さん、エンジニア歴10年、好きな言語: Java
                 ・令和くん、新卒、好きな言語: Kotlin
-
-                早速お二人にJavaScriptに挑戦してもらった。とりあえず関数コンソールに安定の Hoge を出力する関数を作ってって頼んだところ...
                 `}
             </TextBlock>
-            <CodeBlock>{arrowFunctions}</CodeBlock>
         </Section>
 
         <Section>
             <TextBlock>
                 {`
-                なるほど。令和くん、なんか全部一行に書いてるし、すごい今時って感じ。
+                早速お二人にJavaScriptに挑戦してもらった。とりあえず関数コンソールに安定の Hoge を出力する関数を作ってって頼んだところ... なるほど。令和くん、なんか全部一行に書いてるし、すごい今時って感じ。
 
                 でも、ちょっと読みづらいかもだけど、やってること全く一緒っすね。
 
                 ほぼこれで終わりだけど、結構よく出てくる例もう一個あげようと思って、関数を返す関数ってやつだ。
                 `}
             </TextBlock>
+            <CodeBlock showDivider={false}>{arrowFunctions}</CodeBlock>
         </Section>
 
         <Section>
@@ -105,7 +63,7 @@ const ArrowFunctions = () => (
         </Section>
 
         <Section>
-            <TextBlock>
+            <TextBlock header={Header.H3} headerTitle="Binding">
                 {`
                 中々出てこないパターンかもしれないけど、実はthisのバインディングがアロー関数の場合ちょっとfunctionと違うんだ。
 
@@ -115,7 +73,7 @@ const ArrowFunctions = () => (
                 じゃー同じやつをES6っぽくするとどうなるんだろう
                 `}
             </TextBlock>
-            <CodeBlock>{bindingOfThisES5}</CodeBlock>
+            <CodeBlock showDivider={false}>{bindingOfThisES5}</CodeBlock>
         </Section>
 
         <Section>
