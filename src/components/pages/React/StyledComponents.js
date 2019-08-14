@@ -59,7 +59,9 @@ const StyledComponents = () => (
 
         <Section>
             <TextBlock header={Header.H3} headerTitle="Extending">
-                {``}
+                {`
+                すでに存在する Styled component に元のスタイルを崩さないように新しいの追加したい場合、styled の引数
+                `}
             </TextBlock>
             <CodeBlock>{styledExtending}</CodeBlock>
         </Section>
